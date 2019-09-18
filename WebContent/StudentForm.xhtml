@@ -20,18 +20,30 @@
 		<br />
 		<br />
 		Your Last Name<h:inputText value="${student.lastName}"
-			label="last Name" required="true"
-			id="last_name" />
-			<h:message for="last_name" styleClass="error"></h:message>
+			label="last Name" required="true" id="last_name" />
+		<h:message for="last_name" styleClass="error"></h:message>
 		<br />
 		<br />
-				Your email<h:inputText value="${student.email}"
-			label="email" required="true"
-			id="email" requiredMessage="Your must give your email!"/>
-			<h:message for="email" styleClass="error"></h:message>
+				Your email<h:inputText value="${student.email}" label="email"
+			required="true" id="email"
+			requiredMessage="Your must give your email!" />
+		<h:message for="email" styleClass="error"></h:message>
 		<br />
 		<br />
-		
+		Free Passes: <h:inputText value="#{student.freePasses}"
+			label="Free Passes" id="free_passes">
+			<f:validateLongRange minimum="0" maximum="10" />
+		</h:inputText>
+		<h:message for="free_passes" styleClass="error" />
+		<br />
+		<br />
+		Postal Code: <h:inputText value="#{student.postalCode}"
+			label="Postal Code" id="postal_code">
+			<f:validateLength minimum="5" maximum="5" />
+		</h:inputText>
+		<h:message for="postal_code" styleClass="error" />
+		<br />
+		<br />
 		Your Country is
 		<h:selectOneMenu value="${student.country}">
 			<f:selectItem itemValue="USA" itemLabel="USA" />

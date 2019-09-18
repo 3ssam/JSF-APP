@@ -13,6 +13,8 @@ public class Student {
 	private String country;
 	private String job;	
 	private String email;
+	private int freePasses;	
+	private String postalCode;
 	private String favoriteLanguage;
 	private String[] skills;
 	private List<String> jobs;
@@ -74,6 +76,18 @@ public class Student {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getFreePasses() {
+		return freePasses;
+	}
+	public void setFreePasses(int freePasses) {
+		this.freePasses = freePasses;
+	}
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	
 }
