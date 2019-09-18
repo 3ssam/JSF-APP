@@ -11,7 +11,8 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private String country;
-	private String job;
+	private String job;	
+	private String email;
 	private String favoriteLanguage;
 	private String[] skills;
 	private List<String> jobs;
@@ -67,6 +68,12 @@ public class Student {
 	}
 	public void setSkills(String[] skills) {
 		this.skills = skills;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }

@@ -5,16 +5,33 @@
 
 <h:head>
 	<title>Student Form</title>
+	<style>
+.error {
+	color: red;
+}
+</style>
 </h:head>
 
 <h:body>
 	<h:form>
-		Your First Name<h:inputText value="${student.firstName}" />
+		<h:messages styleClass="error" />
+		Your First Name<h:inputText value="${student.firstName}"
+			label="first Name" required="true" />
 		<br />
 		<br />
-		Your Last Name<h:inputText value="${student.lastName}" />
+		Your Last Name<h:inputText value="${student.lastName}"
+			label="last Name" required="true"
+			id="last_name" />
+			<h:message for="last_name" styleClass="error"></h:message>
 		<br />
 		<br />
+				Your email<h:inputText value="${student.email}"
+			label="email" required="true"
+			id="email" requiredMessage="Your must give your email!"/>
+			<h:message for="email" styleClass="error"></h:message>
+		<br />
+		<br />
+		
 		Your Country is
 		<h:selectOneMenu value="${student.country}">
 			<f:selectItem itemValue="USA" itemLabel="USA" />
