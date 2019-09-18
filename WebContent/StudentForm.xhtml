@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
 	<title>Student Form</title>
@@ -11,6 +11,19 @@
 	<h:form>
 		Your First Name<h:inputText value="${student.firstName}" /> <br/><br/>
 		Your Last Name<h:inputText value="${student.lastName}" /> <br/><br/>
+		Your Country is
+		<h:selectOneMenu value="${student.country}">
+		<f:selectItem itemValue="USA" itemLabel="USA"/>
+		<f:selectItem itemValue="Egypt" itemLabel="Egypt"/>
+		<f:selectItem itemValue="German" itemLabel="German"/>
+		<f:selectItem itemValue="England" itemLabel="England"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		your Job is 
+		<h:selectOneMenu value="${student.job}">
+		<f:selectItems value="${student.jobs}" />
+		</h:selectOneMenu>
+		<br/><br/>
 		<h:commandButton value="Sumbit" action="StudentResponse" /> 
 	</h:form>
 </h:body>
