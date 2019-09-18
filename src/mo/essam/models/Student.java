@@ -35,6 +35,8 @@ public class Student {
 		jobs.add("Developer");
 		jobs.add("Tester");
 		jobs.add("Team Leader");
+		firstName = "Karim";
+		lastName = "Sayed";
 	}
 	public String getCountry() {
 		return country;
