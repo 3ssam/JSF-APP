@@ -13,6 +13,7 @@ public class Student {
 	private String country;
 	private String job;
 	private String favoriteLanguage;
+	private String[] skills;
 	private List<String> jobs;
 	
 	public String getFirstName() {
@@ -59,9 +60,11 @@ public class Student {
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
 	}
+	public String[] getSkills() {
+		return skills;
+	}
+	public void setSkills(String[] skills) {
+		this.skills = skills;
+	}
 	
-	
-	
-	
-
 }

@@ -38,6 +38,13 @@
 		</h:selectOneRadio>
 		<br />
 		<br />
+		<h:selectManyCheckbox value="${student.skills}">
+			<f:selectItem itemValue="Developing" itemLabel="Developing" />
+			<f:selectItem itemValue="Testing" itemLabel="Testing" />
+			<f:selectItem itemValue="Desiging" itemLabel="Desiging" />
+			<f:selectItem itemValue="Leading" itemLabel="Leading" />
+			<f:selectItem itemValue="Planning" itemLabel="Planning" />
+		</h:selectManyCheckbox>
 		<br />
 		<br />
 		<h:commandButton value="Sumbit" action="StudentResponse" />
