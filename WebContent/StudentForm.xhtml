@@ -26,15 +26,16 @@
 		<br />
 				Your email<h:inputText value="${student.email}" label="email"
 			required="true" id="email"
+			validator="#{student.checkISAinShamsStudent}"
 			requiredMessage="Your must give your email!" />
 		<h:message for="email" styleClass="error"></h:message>
 		<br />
 		<br />
-				Your Phone Number<h:inputText value="${student.phoneNumber}" label="Phone Number"
-			required="true" id="phoneNumber"
-			validatorMessage="Phone number must follow xxx-xxx-xxxx" >
-			<f:validateRegex pattern="\d{3}-\d{3}-\d{4}"/>
-			</h:inputText>
+				Your Phone Number<h:inputText value="${student.phoneNumber}"
+			label="Phone Number" required="true" id="phoneNumber"
+			validatorMessage="Phone number must follow xxx-xxx-xxxx">
+			<f:validateRegex pattern="\d{3}-\d{3}-\d{4}" />
+		</h:inputText>
 		<h:message for="phoneNumber" styleClass="error"></h:message>
 		<br />
 		<br />

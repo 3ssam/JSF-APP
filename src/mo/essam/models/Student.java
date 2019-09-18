@@ -3,7 +3,11 @@ package mo.essam.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 @ManagedBean
 public class Student {
@@ -118,6 +122,16 @@ public class Student {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
+
+	public void checkISAinShamsStudent(FacesContext context, UIComponent component, Object value)
+			throws ValidatorException {
+
+		if (value == null)
+			return;
+		if (!value.toString().contains("cis.asu.edu.eg")) {
+			FacesMessage message = new FacesMessage("you should login by collage email");
+			throw new ValidatorException(message);
+		}
+	}
 
 }
